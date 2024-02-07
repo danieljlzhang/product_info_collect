@@ -1,12 +1,8 @@
-import pandas as pd
-from time import sleep
-from selenium import webdriver
-from selenium.common import NoSuchElementException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
-
+from time import sleep
+import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 class taobao(object):
@@ -24,7 +20,7 @@ class taobao(object):
         options.add_experimental_option("prefs",
                                         {"credentials_enable_service": False, "profile.password_manager_enabled": False})
         driver = webdriver.Chrome(options=options)
-        with open('./stealth.min.js') as f:
+        with open('util/stealth.min.js') as f:
             script = f.read()
         driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {"source": script})
         sleep(2)
