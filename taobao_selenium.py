@@ -126,7 +126,7 @@ class taobao(object):
 
 
 if __name__ == '__main__':
-    user = '15678852442'
-    pwd = 'zjl1452.911'
+    user = 'your_username'
+    pwd = 'your_password'
     zjl = taobao()
     zjl.login(user, pwd)
